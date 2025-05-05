@@ -1,8 +1,23 @@
+import { Suspense, useEffect } from "react";
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
+
 function App() {
+
+  useEffect(() => {
+    if (localStorage.theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const router = useRoutes(routes);
+
   return (
-    <>
-      <h1 className="text-3xl bg-blue-400 font-bold underline">Hello world!</h1>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      {router}
+    </Suspense>
   );
 }
 
