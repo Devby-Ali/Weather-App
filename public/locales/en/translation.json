@@ -1,0 +1,39 @@
+{
+  "login": {
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
+  },
+  "navbar": {
+    "weather_dashboard": "Weather Dashboard",
+    "searchـyourـlocation": "Search Your Location",
+    "mode": "Mode",
+    "light": "Light",
+    "dark": "Dark",
+    "language": "Language",
+    "exit": "Exit"
+  },
+  "temperatureInfo": {
+    "feels_like" : "Feels Like"
+  },
+  "temperatureChart": {
+    "average_monthly_temperature" : "Average Monthly Temperature"
+  },
+  "weatherDetails": {
+    "2_weeks_forecast": "2 weeks Forecast",
+    "today": "Today"
+  },
+  "week": {
+    "Sat": "Sat",
+    "Sun": "Sun",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri"
+  },
+  "footer": {
+    "contact_us": "contact us",
+    "desc": "All rights of this site are reserved for Nadin Sadr Aria Engineering Company."
+  }
+}

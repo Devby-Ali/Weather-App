@@ -1,0 +1,39 @@
+{
+  "login": {
+    "login": "ورود",
+    "username": "نام کاربری",
+    "password": "رمز عبور"
+  },
+  "navbar": {
+    "weather_dashboard": "داشبورد آب و هوا",
+    "searchـyourـlocation": "مکان مورد نظر را جستجو کنید",
+    "mode": "حالت",
+    "light": "روشن",
+    "dark": "تاریک",
+    "language": "زبان",
+    "exit": "خروج"
+  },
+  "temperatureInfo": {
+    "feels_like" : "درجه احساس می شود"
+  },
+  "temperatureChart": {
+    "average_monthly_temperature" : "میانگین دمای ماهانه"
+  },
+  "weatherDetails": {
+    "2_weeks_forecast": "پیش بینی 2 هفته",
+    "today": "امروز"
+  },
+  "week": {
+    "Sat": "شنبه",
+    "Sun": "یکشنبه",
+    "Mon": "دوشنبه",
+    "Tue": "سه‌شنبه",
+    "Wed": "چهارشنبه",
+    "Thu": "پنجشنبه",
+    "Fri": "جمعه"
+  },
+  "footer": {
+    "contact_us": "تماس با ما",
+    "desc": "همه حقوق این سایت برای شرکت مهندسی نادین صدر آریا محفوظ است."
+  }
+}
