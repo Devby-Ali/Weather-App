@@ -2,12 +2,55 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Roboto Light";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-SemiBold.woff2") format("woff2");
+}
+
 @layer base {
+
+  @font-face {
+    font-family: "Yekan";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Yekan/Yekan.woff2") format("woff2");
+  }
 
   :root {
     direction: ltr;
     writing-mode: horizontal-tb;
     text-orientation: mixed;
+    --font-yekan: "Yekan", sans-serif;
   }
 
   [dir="rtl"] {
@@ -98,6 +141,12 @@
   --shadow-dark: 0px 4px 10px 0px #a6a5a526;
   --shadow-custom: 0px 2px 7px 0px #00000026;
   --radius-4xl: 2rem;
+  --font-yekan: "Yekan", "sans-serif";
+  --font-Roboto-light: "Roboto Light", "sans-serif";
+  --font-Roboto-regular: "Roboto Regular", "sans-serif";
+  --font-Roboto-bold: "Roboto Bold", "sans-serif";
+  --font-Inter-regular: "Inter Regular", "sans-serif";
+  --font-Inter-semiBlod: "Inter SemiBold", "sans-serif";
   --breakpoint-xs: 480px;
 }
 
