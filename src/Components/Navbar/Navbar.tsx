@@ -79,7 +79,7 @@ const Navbar = (): React.JSX.Element => {
       <header className="relative flex justify-between h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide">
         <div className="flex-center gap-x-2">
           <div className="w-11 sm:w-14 h-11 sm:h-14 rounded-full overflow-hidden">
-            <img src="/images/image1.jpg" alt="" />
+            <img src="/images/weather.png" alt="" />
           </div>
           <span className="hidden sm:block text-[11px] sm:text-xs text-darkText dark:text-lightText font-Roboto-light sm:font-Roboto-regular tracking-wide pr-4 text-nowrap">
             {t("navbar.weather_dashboard")}
