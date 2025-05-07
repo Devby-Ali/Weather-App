@@ -5,8 +5,8 @@ import React, {
     createContext,
     useCallback,
   } from "react";
-  import { getCurrentWeather } from "../services/Axios/Requests/weatherService";
-  import { WeatherContextType } from "./WeatherContext.type";
+  import { getCurrentWeather } from "../Services/Axios/Requests/weatherService";
+  import type { WeatherContextType } from "./WeatherContext.type";
   import { useTranslation } from "react-i18next";
   
   const WeatherContext = createContext<WeatherContextType>({
