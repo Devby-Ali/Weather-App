@@ -1,9 +1,9 @@
 import { Suspense, useEffect } from "react";
 import { useRoutes } from "react-router-dom";
 import routes from "./routes";
+import { WeatherProvider } from "./Contexts/WeatherContext";
 
-function App() {
-
+const App = (): React.JSX.Element => {
   useEffect(() => {
     if (localStorage.theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -16,9 +16,9 @@ function App() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      {router}
+      <WeatherProvider>{router}</WeatherProvider>
     </Suspense>
   );
-}
+};
 
 export default App;
