@@ -3,18 +3,18 @@ import { getLocalizedMonth } from "../../Utils/dataService";
 import { Area, CartesianGrid, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 const monthlyTemperatureData = [
-    { month: "Jan", temp: 15 },
-    { month: "Feb", temp: 10 },
-    { month: "Mar", temp: 25 },
-    { month: "Apr", temp: 31 },
-    { month: "May", temp: 11 },
-    { month: "Jun", temp: 28 },
-    { month: "Jul", temp: 22 },
-    { month: "Aug", temp: 16 },
-    { month: "Sep", temp: 40 },
-    { month: "Oct", temp: 10 },
-    { month: "Nov", temp: 11 },
-    { month: "Dec", temp: 16 },
+    { month: "Jan", temp: 18 },
+    { month: "Feb", temp: 20 },
+    { month: "Mar", temp: 22 },
+    { month: "Apr", temp: 19 },
+    { month: "May", temp: 20 },
+    { month: "Jun", temp: 19 },
+    { month: "Jul", temp: 20 },
+    { month: "Aug", temp: 19 },
+    { month: "Sep", temp: 23 },
+    { month: "Oct", temp: 21 },
+    { month: "Nov", temp: 20 },
+    { month: "Dec", temp: 24 },
   ];
   
   const WeatherChart = (): React.JSX.Element => {
