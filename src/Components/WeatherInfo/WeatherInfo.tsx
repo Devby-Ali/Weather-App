@@ -31,8 +31,8 @@ const WeatherInfo = (): React.JSX.Element => {
         <div className="mt-3 sm:mt-3">
           <span className="text-2xl sm:text-[32px] font-bold"> {dayName}</span>
           <div
-            className={`flex font-Roboto-light sm:font-Roboto-regular gap-x-2.5 sm:gap-x-5 mt-0.5 sm:mt-0 ltr ${
-              isPersian ? "text-sm sm:text-[15px]" : " text-xs sm:text-sm"
+            className={`flex font-Roboto-light sm:font-Roboto-regular gap-x-2.5 sm:gap-x-5 ltr ${
+              isPersian ? "text-sm sm:text-[15px] mt-1" : " text-xs sm:text-sm mt-0.5 sm:mt-0"
             }`}
           >
             <div className="flex-center gap-x-1">
@@ -43,7 +43,7 @@ const WeatherInfo = (): React.JSX.Element => {
             <span>{time}</span>
           </div>
         </div>
-        <div className={`mt-3 ${isPersian ? "sm:mt-2.5" : "sm:mt-3"}`}>
+        <div className={`mt-3 ${isPersian ? "sm:mt-[5.13px]" : "sm:mt-3"}`}>
           <div className="flex items-center ltr gap-x-1 sm:gap-x-2 w-min">
             <span className="text-2xl sm:text-[40px] font-bold">
               {formatTemp(weatherData.main.temp)}
