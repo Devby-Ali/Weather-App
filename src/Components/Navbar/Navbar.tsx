@@ -76,12 +76,12 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-      <header className="relative flex justify-between h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide">
+      <header className="relative flex justify-between h-18 2xl:h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide">
         <div className="flex-center gap-x-2">
-          <div className="w-11 sm:w-14 h-11 sm:h-14 rounded-full overflow-hidden">
+          <div className="w-13 sm:w-15 h-13 sm:h-15 rounded-full overflow-hidden dark:opacity-60">
             <img src="/images/weather.png" alt="" />
           </div>
-          <span className="hidden sm:block text-[11px] sm:text-xs text-darkText dark:text-lightText font-Roboto-light sm:font-Roboto-regular tracking-wide pr-4 text-nowrap">
+          <span className="hidden sm:block text-[11px] sm:text-sm text-darkText dark:text-lightText font-Roboto-light sm:font-Roboto-regular tracking-wide xl:pr-1 text-nowrap">
             {t("navbar.weather_dashboard")}
           </span>
         </div>
@@ -150,7 +150,7 @@ const Navbar = (): React.JSX.Element => {
       <div
         className={`${openSetting ? "absolute" : "hidden"} ${
           isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
-        } w-[220px] -mt-3.5 z-10 shadow-header dark:shadow-dark bg-white dark:bg-box-dark rounded-lg px-4 py-[13px] divide-y divide-zinc-200 dark:divide-white/15 font-Roboto-regular`}
+        } w-[220px] -mt-2.5 z-10 shadow-header dark:shadow-dark bg-white dark:bg-box-dark rounded-lg px-4 py-[13px] divide-y divide-zinc-200 dark:divide-white/15 font-Roboto-regular`}
       >
         <div className="pb-3 mb-4">
           <span className="dark:text-lightText tracking-wide">
