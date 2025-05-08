@@ -12,7 +12,6 @@ const Login = (): React.JSX.Element => {
   const [languageShow, setLanguageShow] = useState<boolean>(false);
 
   const { t, i18n } = useTranslation();
-  
 
   useEffect(() => {
     if (localStorage.theme === "dark") {
@@ -159,18 +158,22 @@ const Login = (): React.JSX.Element => {
             } flex-col items-start w-full rounded-b-sm text-darkText dark:text-lightText bg-white dark:bg-box-dark space-y-0.5`}
           >
             <li
-              onClick={() => i18n.changeLanguage("en")}
-              value={"En"}
+              onClick={() => {
+                i18n.changeLanguage("fa")
+                setLanguage("فارسی")
+              }}
+              className="w-full py-1 px-3 hover:bg-stoneCard dark:hover:bg-white/15 cursor-pointer"
+            >
+              فارسی
+            </li>
+            <li
+              onClick={() => {
+                i18n.changeLanguage("en")
+                setLanguage("English")
+              }}
               className="w-full py-1 px-3 hover:bg-stoneCard dark:hover:bg-white/15 cursor-pointer"
             >
               English
-            </li>
-            <li
-              onClick={() => i18n.changeLanguage("fa")}
-              value={"Fa"}
-              className="w-full py-1 px-3 hover:bg-stoneCard dark:hover:bg-white/15 cursor-pointer"
-            >
-              Persian
             </li>
           </ul>
         </div>
@@ -203,4 +206,3 @@ const Login = (): React.JSX.Element => {
 };
 
 export default Login;
-
