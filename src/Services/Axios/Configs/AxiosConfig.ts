@@ -3,7 +3,7 @@ import errorHandler from "../ErrorHandler/ErrorHandler";
 
 const axiosInstance = axios.create({
   baseURL: "https://api.openweathermap.org/data/2.5",
-  timeout: 1000,
+  timeout: 2000,
 });
 
 axiosInstance.interceptors.request.use(
