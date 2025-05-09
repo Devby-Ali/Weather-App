@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { getFormattedDateTime } from "../../Utils/dataService";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
+import { VscGithub } from "react-icons/vsc";
 
 const Footer = (): React.JSX.Element => {
   const { t, i18n } = useTranslation();
@@ -25,24 +26,35 @@ const Footer = (): React.JSX.Element => {
             <path d="m9 11 3 3 3-3"></path>
           </svg>
         </span>
-        <div className="relative mb-1 text-sm group/info">
-          {t("footer.desc")}{" "}
-          <a
-            target="_blank"
-            href="https://github.com/Devby-Ali"
-            className="text-sky-600 dark:text-sky-400 hover:tracking-wide hover:text-emerald-400 font-Inter-regular text-base mx-0.5 cursor-pointer text-nowrap"
-          >
-            Ali Bakhshi
-          </a>
+        <div className="relative tracking-wide flex-center mb-1 text-sm group/info">
+          {t("footer.desc")}
+          <div className="flex-center rtl text-sky-600 dark:text-sky-400">
+            <a
+              target="_blank"
+              href="https://github.com/Devby-Ali"
+              className="hover:tracking-wide tracking-normal font-Inter-regular text-base mx-0.5 cursor-pointer text-nowrap"
+            >
+              Ali Bakhshi
+            </a>
+            <span className={`text-xl block ${isPersian ? "mr-0.5" : "ml-1.5"}`}>
+              <VscGithub />
+            </span>
+          </div>
           <div
             className={`dev_info group-hover/info:dev_info-hover absolute shadow-custom -top-19.5 flex-center w-max gap-x-4 bg-sky-700/15 dark:bg-sky-400/5 backdrop-blur-xs p-2 rounded-full z-50 ${
-              isPersian ? "-right-14 sm:right-42 pl-5 rounded-br-md" : "-left-14 sm:left-47 pr-5 rounded-bl-md"
+              isPersian
+                ? "-right-14 sm:right-42 pl-5 rounded-br-md"
+                : "-left-14 sm:left-47 pr-5 rounded-bl-md"
             }`}
           >
             <div className="size-15 rounded-4xl overflow-hidden">
               <img src="/images/DevbyAli.jpg" alt="" />
             </div>
-            <span className={`text-nowrap font-Inter-regular ${isPersian ? "xs:tracking-wider" : "xs:tracking-wide"}`}>
+            <span
+              className={`text-nowrap font-Inter-regular ${
+                isPersian ? "xs:tracking-wider" : "xs:tracking-wide"
+              }`}
+            >
               {t("footer.dev_info")}
             </span>
           </div>
