@@ -22,6 +22,7 @@ const Navbar = (): React.JSX.Element => {
 
   const { setCity } = useContext<WeatherContextType>(WeatherContext);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const settingsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(async () => {
@@ -47,6 +48,21 @@ const Navbar = (): React.JSX.Element => {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutsideSettings = (e: MouseEvent) => {
+      if (
+        settingsRef.current &&
+        !settingsRef.current.contains(e.target as Node)
+      ) {
+        setOpenSetting(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutsideSettings);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutsideSettings);
   }, []);
 
   interface City {
@@ -147,77 +163,78 @@ const Navbar = (): React.JSX.Element => {
           </div>
         </div>
       </header>
-      <div
-        className={`${openSetting ? "absolute" : "hidden"} ${
-          isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
-        } w-[220px] -mt-2.5 z-10 shadow-header dark:shadow-dark bg-white dark:bg-box-dark rounded-lg px-4 py-[13px] divide-y divide-zinc-200 dark:divide-white/15 font-Roboto-regular`}
-      >
-        <div className="pb-3 mb-4">
-          <span className="dark:text-lightText tracking-wide">
-            {t("navbar.mode")}
-          </span>
-          <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
-            <span
-              className="flex-center gap-x-1.5 w-full text-active-blue dark:text-lightText cursor-pointer border border-active-blue dark:border-zinc-300/25 rounded-l-sm border-r-0 pb-0.5"
-              onClick={() => lightModeHandler()}
-            >
-              <IoSunnyOutline />
-              {t("navbar.light")}
-            </span>
-            <span className="h-full w-0.5 bg-active-blue/80 dark:bg-zinc-400"></span>
-            <span
-              className="flex-center gap-x-1.5 w-full text-zinc-400 dark:text-darkText dark:bg-lightPrimary/80 cursor-pointer border border-zinc-400 rounded-r-sm border-l-0 pb-0.5"
-              onClick={() => darkModeHandler()}
-            >
-              <IoMoonOutline />
-              {t("navbar.dark")}
-            </span>
-          </div>
-        </div>
-
-        <div className="pb-3 pt-0.5">
-          <span className="dark:text-lightText tracking-wide">
-            {t("navbar.language")}
-          </span>
-          <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
-            <span
-              onClick={() => i18n.changeLanguage("en")}
-              className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-l-sm border-r-0 ${
-                isPersian
-                  ? "border-zinc-400 text-zinc-400 dark:text-lightText"
-                  : "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
-              }`}
-            >
-              En
-            </span>
-            <span className="h-full w-0.5 bg-active-blue dark:bg-zinc-400"></span>
-            <span
-              onClick={() => i18n.changeLanguage("fa")}
-              className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-r-sm border-l-0 ${
-                isPersian
-                  ? "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
-                  : "border-zinc-400 text-zinc-400 dark:text-lightText"
-              }`}
-            >
-              Fa
-            </span>
-          </div>
-        </div>
-
-        <Link
-          to={"/Login"}
-          className="flex items-center pl-[2px] pt-4.5 gap-x-2 *:dark:text-lightText tracking-wide"
+      {openSetting && (
+        <div
+          ref={settingsRef}
+          className={`${
+            isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
+          } absolute w-[220px] -mt-2.5 z-10 shadow-header dark:shadow-dark bg-white dark:bg-box-dark rounded-lg px-4 py-[13px] divide-y divide-zinc-200 dark:divide-white/15 font-Roboto-regular`}
         >
-          <RxExit className="text-lg" />
-          <span
-            className={`dark:text-lightText ${
-              isPersian && "mb-1 -mt-1"
-            }`}
+          <div className="pb-3 mb-4">
+            <span className="dark:text-lightText tracking-wide">
+              {t("navbar.mode")}
+            </span>
+            <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
+              <span
+                className="flex-center gap-x-1.5 w-full text-active-blue dark:text-lightText cursor-pointer border border-active-blue dark:border-zinc-300/25 rounded-l-sm border-r-0 pb-0.5"
+                onClick={() => lightModeHandler()}
+              >
+                <IoSunnyOutline />
+                {t("navbar.light")}
+              </span>
+              <span className="h-full w-0.5 bg-active-blue/80 dark:bg-zinc-400"></span>
+              <span
+                className="flex-center gap-x-1.5 w-full text-zinc-400 dark:text-darkText dark:bg-lightPrimary/80 cursor-pointer border border-zinc-400 rounded-r-sm border-l-0 pb-0.5"
+                onClick={() => darkModeHandler()}
+              >
+                <IoMoonOutline />
+                {t("navbar.dark")}
+              </span>
+            </div>
+          </div>
+
+          <div className="pb-3 pt-0.5">
+            <span className="dark:text-lightText tracking-wide">
+              {t("navbar.language")}
+            </span>
+            <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
+              <span
+                onClick={() => i18n.changeLanguage("en")}
+                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-l-sm border-r-0 ${
+                  isPersian
+                    ? "border-zinc-400 text-zinc-400 dark:text-lightText"
+                    : "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
+                }`}
+              >
+                En
+              </span>
+              <span className="h-full w-0.5 bg-active-blue dark:bg-zinc-400"></span>
+              <span
+                onClick={() => i18n.changeLanguage("fa")}
+                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-r-sm border-l-0 ${
+                  isPersian
+                    ? "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
+                    : "border-zinc-400 text-zinc-400 dark:text-lightText"
+                }`}
+              >
+                Fa
+              </span>
+            </div>
+          </div>
+
+          <Link
+            to={"/Login"}
+            className="flex items-center pl-[2px] pt-4.5 gap-x-2 *:dark:text-lightText tracking-wide"
           >
-            {t("navbar.exit")}
-          </span>
-        </Link>
-      </div>
+            <RxExit className="text-lg" />
+            <span
+              className={`dark:text-lightText ${isPersian && "mb-1 -mt-1"}`}
+            >
+              {t("navbar.exit")}
+            </span>
+          </Link>
+        </div>
+      )}
     </>
   );
 };
