@@ -34,6 +34,7 @@
   },
   "footer": {
     "contact_us": "contact me",
-    "desc": "Developed by Ali Bakhshi"
+    "desc": "Developed by : ",
+    "dev_info": "Ali Bakhshi | Front-end React"
   }
 }

@@ -67,7 +67,7 @@ const WeatherCards = [
   
     return (
       <section
-        className={`flex flex-col justify-between h-82 lg:h-[381px] mt-5 lg:mt-7 2xl:mt-10 pb-[26px] bg-stoneCard dark:bg-[#292F45] rounded-xl text-darkText dark:text-lightText font-Inter-regular shadow-weatherDetails ${
+        className={`flex flex-col justify-between h-82 lg:h-[381px] mt-5 lg:mt-7 2xl:mt-10 pb-[26px] bg-stoneCard dark:bg-[#292F45] rounded-2xl text-darkText dark:text-lightText font-Inter-regular shadow-weatherDetails ${
           isPersian ? "pr-4 lg:pr-5 pt-6" : "pl-4 lg:pl-6.5 pt-5.5"
         }`}
       >
