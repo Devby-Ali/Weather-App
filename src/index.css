@@ -120,6 +120,16 @@
   @apply z-0
 }
 
+@utility dev_info {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@utility dev_info-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
 @theme {
   --color-darkText: #003464;
   --color-active-blue: #2196f3;
