@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { WeatherContext } from "../../Contexts/WeatherContext";
-import "swiper/css"
+import "swiper/swiper-bundle.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { toPersianNumbers } from "../../Utils/dataService";
 
