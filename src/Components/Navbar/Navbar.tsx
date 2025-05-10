@@ -9,6 +9,7 @@ import { RxExit } from "react-icons/rx";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { HiX } from "react-icons/hi";
 
 const Navbar = (): React.JSX.Element => {
   const [openSetting, setOpenSetting] = useState<boolean>(false);
@@ -105,14 +106,14 @@ const Navbar = (): React.JSX.Element => {
           <div
             ref={wrapperRef}
             className={`relative h-8 sm:h-10 mx-4 sm:mx-5 sm:w-[295px] flex items-center justify-between rounded-sm border ${
-              showSuggestions ? "border-active-blue/50" : "border-zinc-400/50"
+              showSuggestions ? "border-active-blue/50" : "border-slate-400/50"
             } ${isPersian && "rtl"}`}
           >
             <span
               className={`hidden xs:block absolute -top-[9px] text-xs font-Roboto-light sm:font-Roboto-regular dark:bg-darkPrimary bg-lightPrimary px-[3px] tracking-wide ${
                 showSuggestions
                   ? "text-active-blue"
-                  : "dark:text-zinc-400 text-zinc-500"
+                  : "dark:text-slate-400 text-zinc-500"
               } ${isPersian ? "right-3" : "left-3"}`}
             >
               {t("navbar.searchـyourـlocation")}
@@ -155,7 +156,7 @@ const Navbar = (): React.JSX.Element => {
             className={`flex-center sm:h-10 sm:w-10 sm:border rounded-lg cursor-pointer text-xl ${
               openSetting
                 ? "border-active-blue/50 text-active-blue bg-active-blue/5"
-                : "border-zinc-400/50 text-zinc-400"
+                : "border-slate-400/50 text-slate-400"
             }`}
             onClick={() => setOpenSetting(!openSetting)}
           >
@@ -168,15 +169,18 @@ const Navbar = (): React.JSX.Element => {
           ref={settingsRef}
           className={`${
             isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
-          } absolute w-[220px] -mt-2.5 z-10 shadow-header dark:shadow-dark bg-white dark:bg-box-dark rounded-lg px-4 py-[13px] divide-y divide-zinc-200 dark:divide-white/15 font-Roboto-regular`}
+          } absolute w-[220px] -mt-2.5 z-10 border border-slate-400/40 dark:border-slate-400/20 backdrop-blur-xs bg-sky-200/10 text-slate-800 dark:text-lightText dark:bg-sky-300/5 rounded-lg px-4 py-3.5 font-Roboto-regular`}
         >
-          <div className="pb-3 mb-4">
-            <span className="dark:text-lightText tracking-wide">
+          <div className="mb-4.5">
+            <div className="flex justify-between">
+            <span className="tracking-wide">
               {t("navbar.mode")}
             </span>
+            <span onClick={() => setOpenSetting(false)} className="text-slate-500 cursor-pointer"><HiX/></span>
+            </div>
             <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
               <span
-                className="flex-center gap-x-1.5 w-full text-active-blue dark:text-lightText cursor-pointer border border-active-blue dark:border-zinc-300/25 rounded-l-sm border-r-0 pb-0.5"
+                className="flex-center gap-x-1.5 w-full text-active-blue dark:text-lightText cursor-pointer border border-active-blue dark:border-slate-300/25 rounded-l-sm border-r-0 pb-0.5"
                 onClick={() => lightModeHandler()}
               >
                 <IoSunnyOutline />
@@ -184,7 +188,7 @@ const Navbar = (): React.JSX.Element => {
               </span>
               <span className="h-full w-0.5 bg-active-blue/80 dark:bg-zinc-400"></span>
               <span
-                className="flex-center gap-x-1.5 w-full text-zinc-400 dark:text-darkText dark:bg-lightPrimary/80 cursor-pointer border border-zinc-400 rounded-r-sm border-l-0 pb-0.5"
+                className="flex-center gap-x-1.5 w-full text-slate-500 dark:text-darkText dark:bg-lightPrimary/80 cursor-pointer border border-slate-400 rounded-r-sm border-l-0 pb-0.5"
                 onClick={() => darkModeHandler()}
               >
                 <IoMoonOutline />
@@ -193,16 +197,18 @@ const Navbar = (): React.JSX.Element => {
             </div>
           </div>
 
-          <div className="pb-3 pt-0.5">
-            <span className="dark:text-lightText tracking-wide">
+          <span className="block w-full h-px bg-slate-400/60"></span>
+
+          <div className="mb-4.5 mt-3">
+            <span className="tracking-wide">
               {t("navbar.language")}
             </span>
             <div className="flex h-[33px] mt-[7px] *:text-[14px] *:tracking-wide ltr">
               <span
                 onClick={() => i18n.changeLanguage("en")}
-                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-l-sm border-r-0 ${
+                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-slate-300/25 rounded-l-sm border-r-0 ${
                   isPersian
-                    ? "border-zinc-400 text-zinc-400 dark:text-lightText"
+                    ? "border-slate-400 text-slate-500 dark:text-lightText"
                     : "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
                 }`}
               >
@@ -211,24 +217,24 @@ const Navbar = (): React.JSX.Element => {
               <span className="h-full w-0.5 bg-active-blue dark:bg-zinc-400"></span>
               <span
                 onClick={() => i18n.changeLanguage("fa")}
-                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-zinc-300/25 rounded-r-sm border-l-0 ${
+                className={`flex-center gap-x-2 w-full cursor-pointer border dark:border-slate-300/25 rounded-r-sm border-l-0 ${
                   isPersian
                     ? "text-active-blue border-active-blue dark:text-darkText dark:bg-lightPrimary/80"
-                    : "border-zinc-400 text-zinc-400 dark:text-lightText"
+                    : "border-slate-400 text-slate-500 dark:text-lightText"
                 }`}
               >
                 Fa
               </span>
             </div>
           </div>
-
+          <span className="block w-full h-px bg-slate-400/60"></span>
           <Link
             to={"/Login"}
-            className="flex items-center pl-[2px] pt-4.5 gap-x-2 *:dark:text-lightText tracking-wide"
+            className="flex items-center w-max  text-black dark:text-lightText ml-[2px] mt-3 gap-x-2 tracking-wide"
           >
             <RxExit className="text-lg" />
             <span
-              className={`dark:text-lightText ${isPersian && "mb-1 -mt-1"}`}
+              className={`text-slate-800 dark:text-lightText ${isPersian && "mb-1 -mt-1"}`}
             >
               {t("navbar.exit")}
             </span>
