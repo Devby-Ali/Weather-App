@@ -32,11 +32,11 @@ const Footer = (): React.JSX.Element => {
             <a
               target="_blank"
               href="https://github.com/Devby-Ali"
-              className="hover:tracking-wide tracking-normal font-Inter-regular text-base mx-0.5 cursor-pointer text-nowrap"
+              className="hover:tracking-wide tracking-normal font-Inter-regular text-base ml-1 mr-1.5 cursor-pointer text-nowrap"
             >
               DevbyAli
             </a>
-            <span className={`text-xl block ${isPersian ? "mr-0.5" : "ml-1.5"}`}>
+            <span className={`text-xl block ml-1`}>
               <VscGithub />
             </span>
           </div>
