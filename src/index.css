@@ -38,7 +38,6 @@
 }
 
 @layer base {
-
   @font-face {
     font-family: "Yekan";
     font-style: normal;
@@ -47,9 +46,6 @@
   }
 
   :root {
-    direction: ltr;
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
     --font-yekan: "Yekan", sans-serif;
   }
 
@@ -63,6 +59,9 @@
   }
 
   body {
+    direction: ltr;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
     direction: var(--direction);
     text-align: var(--text-align);
   }
@@ -117,7 +116,7 @@
 
 @utility shadow-cloud {
   filter: drop-shadow(-10px 10px 8px rgba(18, 6, 67, 0.4));
-  @apply z-0
+  @apply z-0;
 }
 
 @utility dev_info {

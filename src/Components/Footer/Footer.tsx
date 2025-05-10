@@ -34,7 +34,7 @@ const Footer = (): React.JSX.Element => {
               href="https://github.com/Devby-Ali"
               className="hover:tracking-wide tracking-normal font-Inter-regular text-base mx-0.5 cursor-pointer text-nowrap"
             >
-              Ali Bakhshi
+              DevbyAli
             </a>
             <span className={`text-xl block ${isPersian ? "mr-0.5" : "ml-1.5"}`}>
               <VscGithub />

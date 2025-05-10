@@ -6,7 +6,6 @@ import { IoLocation } from "react-icons/io5";
 
 const WeatherInfo = (): React.JSX.Element => {
   const { weatherData, loading } = useContext(WeatherContext);
-  console.log(weatherData);
 
   const { dayName, fullDate, time, dayMonth } = getFormattedDateTime();
 
