@@ -1,10 +1,10 @@
 import React, {
     useState,
     useEffect,
-    ReactNode,
     createContext,
     useCallback,
   } from "react";
+  import type { ReactNode } from 'react';
   import { getCurrentWeather } from "../Services/Axios/Requests/weatherService";
   import type { WeatherContextType } from "./WeatherContext.type";
   import { useTranslation } from "react-i18next";

@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { WeatherContext } from "../../Contexts/WeatherContext";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { toPersianNumbers } from "../../Utils/dataService";
 
@@ -87,10 +85,7 @@ const WeatherCards = [
           navigation={false}
           pagination={{ clickable: true }}
           className={`${isPersian ? "!pt-7" : "!pt-8.5"}`}
-          touch={{
-            grabCursor: true,
-            enabled: true,
-          }}
+          touchEventsTarget="container"
         >
           <SwiperSlide>
             <div className="flex items-center flex-col h-53 lg:h-[266px] w-22 lg:w-26 lg:mx-px pt-6 lg:pt-11 bg-[#CDD9E0] dark:bg-[#3F4861] rounded-3xl">

@@ -4,7 +4,7 @@ import REACT_APP_OPENWEATHER_API_KEY from '../../../../config';
 
 const API_KEY = REACT_APP_OPENWEATHER_API_KEY
 
-export const searchCities = async (query) => {
+export const searchCities = async (query: string) => {
   try {
     const response = await axios.get(
       `https://api.openweathermap.org/geo/1.0/direct`,
