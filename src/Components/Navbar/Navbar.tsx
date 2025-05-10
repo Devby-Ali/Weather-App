@@ -14,7 +14,7 @@ import { HiX } from "react-icons/hi";
 const Navbar = (): React.JSX.Element => {
   const [openSetting, setOpenSetting] = useState<boolean>(false);
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
-  const [dark, setDark] = useState<boolean>(false);
+  const [, setDark] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [suggestions, setSuggestions] = useState<City[]>([]);
 
