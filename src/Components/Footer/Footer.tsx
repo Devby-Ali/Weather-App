@@ -45,18 +45,18 @@ const Footer = (): React.JSX.Element => {
             </span>
           </div>
           <div
-            className={`dev_info group-hover/info:dev_info-hover absolute shadow-custom -top-19.5 flex-center w-max gap-x-4 bg-sky-700/15 dark:bg-sky-400/5 backdrop-blur-xs p-2 rounded-full z-50 ${
+            className={`dev_info group-hover/info:dev_info-hover absolute shadow-custom -top-17.5 xl:-top-18.5 flex-center w-max gap-x-4 bg-sky-700/15 dark:bg-sky-400/5 backdrop-blur-xs p-2 rounded-full z-50 ${
               isPersian
-                ? "-right-14 sm:right-42 pl-5 rounded-br-md"
-                : "-left-14 sm:left-47 pr-5 rounded-bl-md"
+                ? "-right-14 sm:right-44 pl-5 rounded-br-md"
+                : "-left-14 xl:left-48 pr-5 rounded-bl-md"
             }`}
           >
-            <div className="size-15 rounded-4xl overflow-hidden">
+            <div className="size-13 xl:size-15 rounded-4xl opacity-85 overflow-hidden">
               <img src="/images/DevbyAli.jpg" alt="" />
             </div>
             <span
-              className={`text-nowrap font-Inter-regular ${
-                isPersian ? "xs:tracking-wider" : "xs:tracking-wide"
+              className={`text-nowrap text-xs font-Inter-regular ${
+                isPersian ? "xs:tracking-wider text-[10px] md:text-xs" : "xs:tracking-wide"
               }`}
             >
               {t("footer.dev_info")}

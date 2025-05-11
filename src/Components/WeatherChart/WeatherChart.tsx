@@ -75,11 +75,11 @@ const monthlyTemperatureData = [
               tick={{
                 fill: "#000",
                 dy: isPersian ? 6 : 12,
-                dx: isPersian ? -30 : 10,
+                dx: isPersian ? -25 : 10,
                 textAnchor: "end",
               }}
               padding={{
-                left: isPersian ? 30 : 0,
+                left: isPersian ? 23 : 0,
               }}
               reversed={isPersian}
             />
