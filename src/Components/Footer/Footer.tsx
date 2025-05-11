@@ -96,7 +96,7 @@ const Footer = (): React.JSX.Element => {
             href="mailto:Ali81forDev@gmail.com"
             className={`text-xs lg:text-sm ${!isPersian && "mb-1"}`}
           >
-            {t("footer.contact_us")} : Ali81forDev@gmail.com
+            {t("footer.contact_us")} : Ali81fordev@gmail.com
           </a>
         </div>
       </section>
