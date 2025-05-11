@@ -168,8 +168,8 @@ const Navbar = (): React.JSX.Element => {
         <div
           ref={settingsRef}
           className={`${
-            isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
-          } absolute w-[220px] -mt-2.5 z-10 border border-slate-400/40 dark:border-slate-400/20 backdrop-blur-xs bg-sky-200/10 text-slate-800 dark:text-lightText dark:bg-sky-300/5 rounded-lg px-4 py-3.5 font-Roboto-regular`}
+            isPersian ? "left-0 ml-[25px] rtl" : "right-0 mr-[25px] ltr"
+          } absolute w-[220px] -mt-2.5 z-10 border border-slate-400/40 dark:border-slate-400/20 backdrop-blur-xs bg-sky-200/10 text-slate-800 dark:text-lightText dark:bg-sky-300/5 rounded-lg px-4 py-3.5 font-Roboto-regular `}
         >
           <div className="mb-4.5">
             <div className="flex justify-between">

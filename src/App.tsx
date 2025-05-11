@@ -1,19 +1,9 @@
-import { Suspense, useEffect, useLayoutEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useRoutes } from "react-router-dom";
 import routes from "./routes";
 import { WeatherProvider } from "./Contexts/WeatherContext";
-import { useTranslation } from "react-i18next";
 
 const App = (): React.JSX.Element => {
-
-  const { t, i18n } = useTranslation();
-
-
-useLayoutEffect(() => {
-  document.documentElement.dir = t('dir');
-  document.documentElement.lang = i18n.language;
-}, [i18n.language, t])
-
   useEffect(() => {
     if (localStorage.theme === "dark") {
       document.documentElement.classList.add("dark");
