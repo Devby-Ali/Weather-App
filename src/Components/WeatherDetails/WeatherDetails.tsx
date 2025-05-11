@@ -84,7 +84,7 @@ const WeatherCards = [
           spaceBetween={15}
           navigation={false}
           pagination={{ clickable: true }}
-          className={`${isPersian ? "!pt-7" : "!pt-8.5"}`}
+          className={`${isPersian ? "!pt-7 !rtl" : "!pt-8.5 !ltr"}`}
           touchEventsTarget="container"
         >
           <SwiperSlide>

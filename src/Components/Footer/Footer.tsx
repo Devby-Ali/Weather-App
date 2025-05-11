@@ -10,7 +10,11 @@ const Footer = (): React.JSX.Element => {
   const { dayName, fullDate, time, dayMonth } = getFormattedDateTime();
   const isPersian = i18n.language === "fa";
   return (
-    <footer className="flex flex-col sm:flex-row px-6 lg:items-center justify-center sm:justify-between w-full h-26 bg-gradient-to-r dark:from-[#292F45] dark:via-[#3F4861] dark:to-[#151D32] from-[#F3FAFE] via-[#CCDDDD9E] to-[#F3FAFE] text-darkText dark:text-lightText">
+    <footer
+      className={`flex flex-col sm:flex-row px-6 lg:items-center justify-center sm:justify-between w-full h-26 bg-gradient-to-r dark:from-[#292F45] dark:via-[#3F4861] dark:to-[#151D32] from-[#F3FAFE] via-[#CCDDDD9E] to-[#F3FAFE] text-darkText dark:text-lightText ${
+        isPersian ? "rtl" : "ltr"
+      }`}
+    >
       <section className="relative flex items-center gap-x-3">
         <span className="text-sky-600 dark:text-sky-400 mt-px sm:mt-0">
           <svg
