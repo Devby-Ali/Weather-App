@@ -93,7 +93,7 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-      <header className={`relative flex justify-between h-18 2xl:h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide ${isPersian && "rtl"}`}>
+      <header className="relative flex justify-between h-18 2xl:h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide">
         <div className="flex-center gap-x-2">
           <div className="w-13 sm:w-15 h-13 sm:h-15 rounded-full overflow-hidden dark:opacity-60">
             <img src="/images/weather.png" alt="" />
@@ -168,7 +168,7 @@ const Navbar = (): React.JSX.Element => {
         <div
           ref={settingsRef}
           className={`${
-            isPersian ? "left-0 ml-[25px] rtl" : "right-0 mr-[25px]"
+            isPersian ? "left-0 ml-[25px]" : "right-0 mr-[25px]"
           } absolute w-[220px] -mt-2.5 z-10 border border-slate-400/40 dark:border-slate-400/20 backdrop-blur-xs bg-sky-200/10 text-slate-800 dark:text-lightText dark:bg-sky-300/5 rounded-lg px-4 py-3.5 font-Roboto-regular`}
         >
           <div className="mb-4.5">
