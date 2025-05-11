@@ -23,11 +23,8 @@ i18n
   });
 
 i18n.on('languageChanged', (lng) => {
-  const direction = i18n.t('dir') || (lng === 'fa' ? 'rtl' : 'ltr');
-  document.documentElement.dir = direction;
+  document.documentElement.dir = lng === 'fa' ? 'rtl' : 'ltr';
   document.documentElement.lang = lng;
-  document.documentElement.classList.remove('rtl', 'ltr');
-  document.documentElement.classList.add(direction);
 });
 
 export default i18n;

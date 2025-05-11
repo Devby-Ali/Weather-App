@@ -54,6 +54,11 @@
     --text-align: right;
   }
 
+  [dir="ltr"] {
+    --direction: ltr;
+    --text-align: left;
+  }
+
   html[lang="fa"] * {
     font-family: var(--font-yekan) !important;
   }
