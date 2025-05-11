@@ -93,7 +93,7 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-      <header className="relative flex justify-between h-18 2xl:h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide">
+      <header className={`relative flex justify-between h-18 2xl:h-20 bg-lightPrimary dark:bg-darkPrimary shadow-header dark:shadow-dark px-4 sm:px-6 tracking-wide ${isPersian ? "rtl" : "ltr"}`}>
         <div className="flex-center gap-x-2">
           <div className="w-13 sm:w-15 h-13 sm:h-15 rounded-full overflow-hidden dark:opacity-60">
             <img src="/images/weather.png" alt="" />
