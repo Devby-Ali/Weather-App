@@ -1,8 +1,7 @@
-import axios from 'axios';
-import errorHandler from '../ErrorHandler/ErrorHandler';
-import REACT_APP_OPENWEATHER_API_KEY from '../../../../config';
+import axios from "axios";
+import errorHandler from "../ErrorHandler/ErrorHandler";
 
-const API_KEY = REACT_APP_OPENWEATHER_API_KEY
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
 export const searchCities = async (query: string) => {
   try {
@@ -12,8 +11,8 @@ export const searchCities = async (query: string) => {
         params: {
           q: query,
           limit: 5,
-          appid: API_KEY
-        }
+          appid: API_KEY,
+        },
       }
     );
     return response.data;

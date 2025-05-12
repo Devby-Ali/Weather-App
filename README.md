@@ -1,55 +1,84 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Weather App](public/images/app-icon.png)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Weather App is a modern, responsive web application that provides real-time weather updates and forecasts. It supports multiple languages and themes, making it accessible and user-friendly for a global audience.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-time Weather Updates**: Get the latest weather information for your location.
+- **Interactive Charts**: Visualize weather trends with dynamic charts.
+- **Multi-language Support**: Switch between languages seamlessly.
+- **Dark Mode**: Enjoy a comfortable viewing experience in low-light conditions.
+- **Responsive Design**: Optimized for all devices, from mobile to desktop.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technologies Used
+
+- **Frontend**: React, TypeScript, TailwindCSS
+- **State Management**: React Context API
+- **Localization**: i18next
+- **Charts**: Recharts
+- **Date Handling**: Moment.js and Moment-Jalaali
+- **Build Tool**: Vite
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+## Deployment
+
+This app is deployed online and accessible at:
+[Weather App - Live Demo](https://weatherapp.liara.run)
+
+## Folder Structure
+
+```
+weather-app/
+├── public/         # Static assets
+├── src/            # Source code
+│   ├── Components/ # Reusable components
+│   ├── Pages/      # Page components
+│   ├── Utils/      # Utility functions
+│   ├── types/      # TypeScript type definitions
+├── package.json    # Project metadata and dependencies
+├── vite.config.ts  # Vite configuration
+└── README.md       # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Contributions are welcome! Please follow these steps:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# Weather-App
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push them to your fork.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please contact [your-email@example.com](mailto:ali81fordev@gmail.com).

@@ -1,9 +1,8 @@
 import errorHandler from "../ErrorHandler/ErrorHandler";
-import REACT_APP_OPENWEATHER_API_KEY from '../../../../config'
 import axiosInstance from '../Configs/AxiosConfig';
 import i18n from "../../../i18n";
 
-const API_KEY = REACT_APP_OPENWEATHER_API_KEY
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
 export const getCurrentWeather = async (city: string) => {
   try {
