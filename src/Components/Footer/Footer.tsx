@@ -30,7 +30,7 @@ const Footer = (): React.JSX.Element => {
             <path d="m9 11 3 3 3-3"></path>
           </svg>
         </span>
-        <div className="relative tracking-wide flex-center mb-1 text-sm group/info">
+        <div className="relative tracking-wide flex-center mb-1 text-sm group/info select-none">
           {t("footer.desc")}
           <div className="flex-center rtl text-sky-600 dark:text-sky-400">
             <a
@@ -38,7 +38,7 @@ const Footer = (): React.JSX.Element => {
               href="https://github.com/Devby-Ali"
               className="hover:tracking-wide tracking-normal font-Inter-regular text-base ml-1 mr-1.5 cursor-pointer text-nowrap"
             >
-              DevbyAli
+              Devby-Ali
             </a>
             <span className={`text-xl block ml-1`}>
               <VscGithub />
