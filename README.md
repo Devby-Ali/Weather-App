@@ -2,6 +2,8 @@
 
 ![Weather App](public/images/app-icon.png)
 
+Feel free to give it a star ⭐ to this repository please. I appreciate your support in advance. 💙
+
 ## Overview
 
 The Weather App is a modern, responsive web application that provides real-time weather updates and forecasts. It supports multiple languages and themes, making it accessible and user-friendly for a global audience.
