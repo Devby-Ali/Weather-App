@@ -83,8 +83,8 @@ const WeatherInfo = (): React.JSX.Element => {
             {weatherData.weather[0].description}
           </span>
           <div
-            className={`flex gap-x-1.5 mt-2.5 text-xs ${
-              isPersian ? "sm:text-sm" : "sm:text-base"
+            className={`flex gap-x-1.5 mt-2.5 text-xs ltr ${
+              isPersian ? "sm:text-shadow-md" : "sm:text-base"
             }`}
           >
             <span>{t("temperatureInfo.feels_like")}</span>
