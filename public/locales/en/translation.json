@@ -1,4 +1,6 @@
 {
+  "loading": "Loading",
+  "connect_error": "Weather information unavailable | Server problem !",
   "login": {
     "login": "Login",
     "username": "Username",

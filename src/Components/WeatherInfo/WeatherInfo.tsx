@@ -5,16 +5,12 @@ import { useTranslation } from "react-i18next";
 import { IoLocation } from "react-icons/io5";
 
 const WeatherInfo = (): React.JSX.Element => {
-  const { weatherData, loading } = useContext(WeatherContext);
+  const { weatherData } = useContext(WeatherContext);
 
   const { dayName, fullDate, time, dayMonth } = getFormattedDateTime();
 
   const { t, i18n } = useTranslation();
   const isPersian = i18n.language === "fa";
-
-  if (loading) return <div>در حال بارگذاری...</div>;
-
-  if (!weatherData) return <div>اطلاعات آب و هوا در دسترس نیست</div>;
 
   return (
     <section className="flex lg:w-1/2 xl:w-44/100 h-min justify-between px-6 pt-5 pb-4.5 shadow-custom text-darkText dark:text-lightText font-Roboto-regular">

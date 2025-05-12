@@ -57,11 +57,7 @@ const WeatherCards = [
   
     const isPersian = i18n.language === "fa";
   
-    const { weatherData, loading } = useContext(WeatherContext);
-
-    if (loading) return <div>در حال بارگذاری...</div>;
-  
-    if (!weatherData) return <div>اطلاعات آب و هوا در دسترس نیست</div>;
+    const { weatherData } = useContext(WeatherContext);
   
     return (
       <section
