@@ -49,7 +49,7 @@ const Login = (): React.JSX.Element => {
 
   return (
     <>
-      <section className="relative container flex-center flex-col bg-lightPrimary dark:bg-darkPrimary font-Roboto-regular">
+      <section className="relative container flex-center flex-col bg-lightPrimary dark:bg-darkPrimary font-Roboto-regular overflow-x-hidden">
         <div className="flex-center w-full h-screen">
           <div className="flex w-full sm:w-9/12 lg:w-240 h-140 rounded-xl overflow-hidden shadow-Login mb-6">
             <form className="z-10 w-full lg:w-[506px] flex-center backdrop-blur-xs bg-sky-400/10 lg:bg-white dark:bg-sky-300/5 lg:dark:bg-box-dark">
