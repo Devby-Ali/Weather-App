@@ -1,7 +1,5 @@
 # Weather App
 
-![Weather App](public/images/app-icon.png)
-
 Feel free to give it a star ⭐ to this repository please. I appreciate your support in advance. 💙
 
 ## Overview
@@ -30,7 +28,7 @@ The Weather App is a modern, responsive web application that provides real-time 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/Devby-Ali/Weather-App.git
    cd weather-app
    ```
 
@@ -46,7 +44,7 @@ The Weather App is a modern, responsive web application that provides real-time 
    npm run dev
    ```
 
-4. Open your browser and navigate to `http://localhost:3000`.
+4. Open your browser and navigate to `http://localhost:5173`.
 
 ## Deployment
 
@@ -83,4 +81,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or feedback, please contact [your-email@example.com](mailto:ali81fordev@gmail.com).
+For questions or feedback, please contact [me](mailto:ali81fordev@gmail.com).
